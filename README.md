@@ -1,6 +1,6 @@
 <p align="center"><img src="picture.png" /></p>
 
-# Gentelella - Core theme Gentelella
+# gentelella - Core theme gentelella
 ![License](https://img.shields.io/github/license/LaswitchTech/core-theme-gentelella?style=for-the-badge)
 ![GitHub repo size](https://img.shields.io/github/repo-size/LaswitchTech/core-theme-gentelella?style=for-the-badge&logo=github)
 ![GitHub top language](https://img.shields.io/github/languages/top/LaswitchTech/core-theme-gentelella?style=for-the-badge)
@@ -16,7 +16,7 @@ LaswitchTech - Core Framework extension.
 This software is distributed under the [GPLv3](LICENSE) license.
 
 ## Installation
-Open your application's extension manager, search for `Gentelella` and press `Install`.
+Open your application's extension manager, search for `gentelella` and press `Install`.
 
 ## Security
 Please disclose any vulnerabilities found responsibly – report security issues to the maintainers privately. See [SECURITY.md](SECURITY.md) for more information.
