@@ -1,0 +1,33 @@
+// src/scss/utilities/_background.scss
+@use "sass:map";
+@use "sass:math";
+@use "../colors" as colors;
+@use "bootstrap/scss/bootstrap" as bs;
+
+// Transparent
+.bg-transparent  {
+    background-color: transparent !important;
+    background-image: none !important;
+    backdrop-filter: none !important;
+}
+
+// Background Colors
+@each $name, $color in bs.$theme-colors {
+    .bg-#{$name} {
+        background-color: var(--bs-$name) !important;
+    }
+    .text-bg-#{$name} {
+        background-color: var(--bs-$name) !important;
+        color: bs.color-contrast($color) !important;
+    }
+}
+
+// Dark mode adjustments
+@include bs.color-mode(dark) {
+    // Background Colors
+    @each $name, $color in colors.$theme-colors-dark {
+        .text-bg-#{$name} {
+            color: bs.color-contrast($color) !important;
+        }
+    }
+}
