@@ -1,0 +1,32 @@
+/* src/scss/forms/_input-group.scss */
+@use "sass:map";
+@use "sass:math";
+@use "bootstrap/scss/bootstrap" as bs;
+
+.row {
+    > .input-group.col,
+    > .input-group[class*="col-"] {
+        width: auto;
+    }
+}
+
+/* Ensure .input-group used as a grid column respects grid widths */
+@each $bp, $min in bs.$grid-breakpoints {
+    // "" for xs, "-md" for md, etc.
+    $infix: bs.breakpoint-infix($bp, bs.$grid-breakpoints);
+
+    @include bs.media-breakpoint-up($bp) {
+        /* Auto columns */
+        .row > .input-group.col#{$infix},
+        .row > .input-group.col#{$infix}-auto {
+            width: auto;
+        }
+
+        /* Fixed-span columns: .col[-{bp}]-1 ... .col[-{bp}]-12 */
+        @for $i from 1 through bs.$grid-columns {
+            .row > .input-group.col#{$infix}-#{$i} {
+                width: math.percentage(math.div($i, bs.$grid-columns));
+            }
+        }
+    }
+}
